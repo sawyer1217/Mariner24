@@ -17,6 +17,7 @@ var/global/list/autolathe_recipes = list( \
 		new /obj/item/weapon/airlock_electronics(), \
 		new /obj/item/weapon/airalarm_electronics(), \
 		new /obj/item/weapon/firealarm_electronics(), \
+		new /obj/item/weapon/cable_coil(), \
 		new /obj/item/stack/sheet/metal(), \
 		new /obj/item/stack/sheet/glass(), \
 		new /obj/item/stack/sheet/rglass(), \
@@ -60,7 +61,7 @@ var/global/list/autolathe_recipes_hidden = list( \
 		new /obj/item/ammo_magazine/c45m(), \
 		new /obj/item/ammo_casing/shotgun(), \
 		new /obj/item/ammo_casing/shotgun/dart(), \
-		/* new /obj/item/weapon/shield/riot(), */ \
+		new /obj/item/weapon/shield/riot(), \
 	)
 
 /obj/machinery/autolathe
