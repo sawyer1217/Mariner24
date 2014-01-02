@@ -99,11 +99,11 @@
 	projectile = /obj/item/projectile/beam/pulse/heavy
 	fire_sound = 'sound/weapons/marauder.ogg'
 
-
 /obj/item/projectile/beam/pulse/heavy
 	name = "heavy pulse laser"
 	icon_state = "pulse1_bl"
 	var/life = 20
+	damage = 70
 
 	Bump(atom/A)
 		A.bullet_act(src, def_zone)

@@ -18,7 +18,7 @@
 	force = 15
 	var/phasing = 0
 	var/phasing_energy_drain = 200
-	max_equip = 4
+	max_equip = 5
 
 
 /obj/mecha/combat/phazon/New()
