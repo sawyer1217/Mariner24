@@ -173,8 +173,10 @@ datum/preferences
 				return "Exceptional"
 			if(19 to 24)
 				return "Genius"
-			if(24 to 1000)
-				return "God"
+			if(25 to 50)
+				return "Superhuman"
+			if(51 to 1000)
+				return "Mary Sue"
 
 	proc/SetSkills(mob/user)
 		if(SKILLS == null)
@@ -923,7 +925,7 @@ datum/preferences
 							b_type = new_b_type
 
 					if("hair")
-						if(species == "Human" || species == "Unathi")
+						if(species == "Human" || species == "Unathi" || species == "Vox")
 							var/new_hair = input(user, "Choose your character's hair colour:", "Character Preference") as color|null
 							if(new_hair)
 								r_hair = hex2num(copytext(new_hair, 2, 4))
@@ -1136,7 +1138,7 @@ datum/preferences
 						var/UI_style_alpha_new = input(user, "Select a new alpha(transparence) parametr for UI, between 50 and 255") as num
 						if(!UI_style_alpha_new | !(UI_style_alpha_new <= 255 && UI_style_alpha_new >= 50)) return
 						UI_style_alpha = UI_style_alpha_new
-								
+
 					if("be_special")
 						var/num = text2num(href_list["num"])
 						be_special ^= (1<<num)
