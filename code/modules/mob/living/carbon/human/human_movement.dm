@@ -1,7 +1,7 @@
 /mob/living/carbon/human/movement_delay()
 	var/tally = 0
-	var/mob/living/carbon/human/H
-	var/race = H.species.name
+	var/mob/living/carbon/human/MD
+	var/race = MD.species.name
 
 	if (istype(loc, /turf/space)) return -1 // It's hard to be slowed down in space by... anything
 
@@ -34,8 +34,14 @@
 
 	if(race == "Skrell")
 		tally += 1
-	else if (race == "Unathi" || race == "Tajaran" || race == "Vox")
-		tally -= 1
+	else if (race == "Unathi")
+		tally += -1
+	else if (race == "Tajaran")
+		tally += -1
+	else if (race == "Vox")
+		tally += -1
+	else
+		tally += 0
 
 	if(shock_stage >= 10) tally += 3
 
