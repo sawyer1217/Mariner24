@@ -9,6 +9,7 @@
 	heat_protection = UPPER_TORSO|LOWER_TORSO
 	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROTECITON_TEMPERATURE
 	siemens_coefficient = 0.6
+	species_restricted = list("exclude","Vox")
 
 
 /obj/item/clothing/suit/armor/vest
@@ -31,6 +32,7 @@
 	desc = "An armoured jacket with silver rank pips and livery."
 	icon_state = "warden_jacket"
 	item_state = "armor"
+	species_restricted = null
 
 
 /obj/item/clothing/suit/armor/riot
@@ -99,6 +101,7 @@
 	flags = FPRINT | TABLEPASS | ONESIZEFITSALL
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	armor = list(melee = 50, bullet = 15, laser = 50, energy = 10, bomb = 25, bio = 0, rad = 0)
+	species_restricted = null
 
 
 //Reactive armor

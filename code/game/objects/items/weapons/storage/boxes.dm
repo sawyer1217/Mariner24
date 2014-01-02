@@ -364,6 +364,25 @@
 		new /obj/item/weapon/handcuffs(src)
 		new /obj/item/weapon/handcuffs(src)
 
+/obj/item/weapon/storage/box/captain/
+	New()
+		..()
+		contents = list()
+		sleep(1)
+		new /obj/item/clothing/mask/breath(src)
+		new /obj/item/weapon/tank/emergency_oxygen/double(src)
+		return
+
+/obj/item/weapon/storage/box/vox/
+	New()
+		..()
+		contents = list()
+		sleep(1)
+		new /obj/item/clothing/mask/breath/vox(src)
+		new /obj/item/weapon/tank/emergency_nitrogen(src)
+		new /obj/item/weapon/storage/pill_bottle/antitox(src)
+		return
+
 /obj/item/weapon/storage/box/mousetraps
 	name = "box of Pest-B-Gon Mousetraps"
 	desc = "<B><FONT=red>WARNING:</FONT></B> <I>Keep out of reach of children</I>."
