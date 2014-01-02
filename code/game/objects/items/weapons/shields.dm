@@ -14,7 +14,7 @@
 	throw_range = 4
 	w_class = 4.0
 	g_amt = 7500
-	m_amt = 1000
+	m_amt = 10000
 	origin_tech = "materials=2"
 	attack_verb = list("shoved", "bashed")
 	var/cooldown = 0 //shield bash cooldown. based on world.time
@@ -43,6 +43,7 @@
 	throw_range = 4
 	w_class = 1
 	origin_tech = "materials=4;magnets=3;syndicate=4"
+	var/construction_cost = list("metal"=1000,"glass"=1000,"uranium"=5000,"plasma"=5000)
 	attack_verb = list("shoved", "bashed")
 	var/active = 0
 
@@ -59,6 +60,7 @@
 	throw_range = 10
 	w_class = 2.0
 	origin_tech = "magnets=3;syndicate=4"
+	var/construction_cost = list("metal"=2000,"glass"=1000,"uranium"=2500,"plasma"=5000,"gold"=2500)
 
 
 /obj/item/weapon/cloaking_device/attack_self(mob/user as mob)
