@@ -22,10 +22,7 @@
 
 
 	on_hit(var/atom/target, var/blocked = 0)
-		if(config.use_recursive_explosions)
-			explosion_rec(target, 1)
-		else
-			explosion(target, -1, 0, 2)
+		explosion(target, -1, 0, 2)
 		return 1
 
 /obj/item/projectile/temp
