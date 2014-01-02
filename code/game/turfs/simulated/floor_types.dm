@@ -90,6 +90,18 @@
 	nitrogen = 0.001
 	temperature = TCMB
 
+/turf/simulated/plating/vox
+	name = "plating"
+	icon_state = "plating"
+	oxygen = 0
+	nitrogen = MOLES_CELLSTANDARD
+
+/turf/simulated/floor/vox/
+	name = "floor"
+	icon_state = "floor"
+	oxygen = 0
+	nitrogen = MOLES_CELLSTANDARD
+
 /turf/simulated/floor/plating
 	name = "plating"
 	icon_state = "plating"
@@ -142,6 +154,19 @@
 /turf/simulated/shuttle/floor4 // Added this floor tile so that I have a seperate turf to check in the shuttle -- Polymorph
 	name = "Brig floor"        // Also added it into the 2x3 brig area of the shuttle.
 	icon_state = "floor4"
+
+/turf/simulated/shuttle/vox/plating
+	name = "plating"
+	icon = 'icons/turf/floors.dmi'
+	icon_state = "plating"
+	oxygen = 0
+	nitrogen = MOLES_CELLSTANDARD
+
+/turf/simulated/shuttle/vox/floor
+	name = "floor"
+	icon_state = "floor4"
+	oxygen = 0
+	nitrogen = MOLES_CELLSTANDARD
 
 /turf/simulated/floor/beach
 	name = "Beach"
