@@ -5,7 +5,6 @@
 	damage_type = BURN
 	flag = "energy"
 
-
 /obj/item/projectile/energy/electrode
 	name = "electrode"
 	icon_state = "spark"
@@ -19,7 +18,8 @@
 	damage_type = HALLOSS
 	//Damage will be handled on the MOB side, to prevent window shattering.
 
-
+/obj/item/projectile/energy/electrode/strong
+	agony = 60
 
 /obj/item/projectile/energy/declone
 	name = "declone"

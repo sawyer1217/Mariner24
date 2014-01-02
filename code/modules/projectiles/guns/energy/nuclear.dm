@@ -1,11 +1,11 @@
 /obj/item/weapon/gun/energy/gun
-	name = "energy gun"
+	name = "A716 Energy Pistol"
 	desc = "A basic energy-based gun with two settings: Stun and kill."
 	icon_state = "energystun100"
 	item_state = null	//so the human update icon uses the icon_state instead.
 	fire_sound = 'sound/weapons/Taser.ogg'
 
-	charge_cost = 100 //How much energy is needed to fire.
+	charge_cost = 50 //How much energy is needed to fire.
 	projectile_type = "/obj/item/projectile/energy/electrode"
 	origin_tech = "combat=3;magnets=2"
 	modifystate = "energystun"
@@ -24,22 +24,54 @@
 				modifystate = "energykill"
 			if(1)
 				mode = 0
-				charge_cost = 100
+				charge_cost = 50
 				fire_sound = 'sound/weapons/Taser.ogg'
 				user << "\red [src.name] is now set to stun."
 				projectile_type = "/obj/item/projectile/energy/electrode"
 				modifystate = "energystun"
 		update_icon()
 
+/obj/item/weapon/gun/energy/gun/captain
+	name = "Bolt 2411"
+	desc = "A true classic. Powerful and deadly, this chromed energy pistol is as much a fine-tuned personal defense weapon as it is a collector's item. Comes with a polished walnut stock."
+	cell_type = "/obj/item/weapon/cell/high"
+	icon_state = "capenergystun100"
+	item_state = null	//so the human update icon uses the icon_state instead.
+	fire_sound = 'sound/weapons/Taser.ogg'
+
+	charge_cost = 50 //How much energy is needed to fire.
+	projectile_type = "/obj/item/projectile/energy/electrode/strong"
+	origin_tech = "combat=4;magnets=3"
+	modifystate = "capenergystun"
+	w_class = 2.0
+
+	attack_self(mob/living/user as mob)
+		switch(mode)
+			if(0)
+				mode = 1
+				charge_cost = 100
+				fire_sound = 'sound/weapons/Laser.ogg'
+				user << "\red [src.name] is now set to kill."
+				projectile_type = "/obj/item/projectile/beam"
+				modifystate = "capenergykill"
+			if(1)
+				mode = 0
+				charge_cost = 50
+				fire_sound = 'sound/weapons/Taser.ogg'
+				user << "\red [src.name] is now set to stun."
+				projectile_type = "/obj/item/projectile/energy/electrode/strong"
+				modifystate = "capenergystun"
+		update_icon()
 
 
 /obj/item/weapon/gun/energy/gun/nuclear
-	name = "Advanced Energy Gun"
+	name = "R047 Nuclear Energy Gun"
 	desc = "An energy gun with an experimental miniaturized reactor."
 	icon_state = "nucgun"
 	origin_tech = "combat=3;materials=5;powerstorage=3"
 	var/lightfail = 0
 	var/charge_tick = 0
+	cell_type = "/obj/item/weapon/cell/high"
 
 	New()
 		..()

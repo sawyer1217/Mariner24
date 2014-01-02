@@ -3,7 +3,7 @@
 	desc = "A box of .357 ammo"
 	icon_state = "357"
 	ammo_type = "/obj/item/ammo_casing/a357"
-	max_ammo = 7
+	max_ammo = 12
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/c38
@@ -18,7 +18,7 @@
 	name = "magazine (.45)"
 	icon_state = "45"
 	ammo_type = "/obj/item/ammo_casing/c45"
-	max_ammo = 7
+	max_ammo = 8
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/c45/empty
@@ -28,7 +28,7 @@
 	name = "magazine (.45 rubber)"
 	icon_state = "45"
 	ammo_type = "/obj/item/ammo_casing/c45r"
-	max_ammo = 7
+	max_ammo = 8
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/c45r/empty
@@ -115,6 +115,8 @@
 	ammo_type = "/obj/item/ammo_casing/a75"
 	multiple_sprites = 1
 	max_ammo = 8
+	origin_tech = "combat=6;materials=4;plasmatech=4"
+	var/construction_cost = list("metal"=5000,"plasma"=5000)
 
 /obj/item/ammo_magazine/a75/empty
 	name = "ammo magazine (.75)"
@@ -129,6 +131,8 @@
 	ammo_type = "/obj/item/ammo_casing/a762"
 	max_ammo = 50
 	multiple_sprites = 1
+	origin_tech = "combat=5;materials=1"
+	var/construction_cost = list("metal"=10000,"plasma"=1000)
 
 /obj/item/ammo_magazine/a762/empty
 	name = "magazine (a762)"

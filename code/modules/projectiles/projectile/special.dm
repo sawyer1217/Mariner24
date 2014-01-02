@@ -15,12 +15,17 @@
 /obj/item/projectile/bullet/gyro
 	name ="explosive bolt"
 	icon_state= "bolter"
-	damage = 50
+	damage = 75
+	stun = 45
+	weaken = 35
 	flag = "bullet"
 
 
 	on_hit(var/atom/target, var/blocked = 0)
-		explosion(target, -1, 0, 2)
+		if(config.use_recursive_explosions)
+			explosion_rec(target, 1)
+		else
+			explosion(target, -1, 0, 2)
 		return 1
 
 /obj/item/projectile/temp

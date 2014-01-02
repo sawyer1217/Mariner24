@@ -1,11 +1,13 @@
-/obj/item/projectile/bullet
+/obj/item/projectile/bullet //Large-caliber rounds
 	name = "bullet"
 	icon_state = "bullet"
-	damage = 60
+	damage = 50
 	damage_type = BRUTE
 	nodamage = 0
 	flag = "bullet"
 	embed = 1
+	stun = 35
+	weaken = 25
 
 	on_hit(var/atom/target, var/blocked = 0)
 		if (..(target, blocked))
@@ -14,18 +16,20 @@
 
 /obj/item/projectile/bullet/weakbullet // "rubber" bullets
 	damage = 10
-	stun = 5
-	weaken = 5
+	stun = 10
+	weaken = 10
 	embed = 0
 
 
-/obj/item/projectile/bullet/midbullet
-	damage = 20
-	stun = 5
-	weaken = 5
-
-/obj/item/projectile/bullet/midbullet2
+/obj/item/projectile/bullet/midbullet //Small-caliber rounds
 	damage = 25
+	stun = 10
+	weaken = 10
+
+/obj/item/projectile/bullet/midbullet2 //medium-caliber rounds
+	damage = 35
+	stun = 15
+	weaken = 15
 
 /obj/item/projectile/bullet/suffocationbullet//How does this even work?
 	name = "co bullet"
@@ -47,10 +51,12 @@
 /obj/item/projectile/bullet/stunshot
 	name = "stunshot"
 	damage = 5
-	stun = 10
-	weaken = 10
-	stutter = 10
+	stun = 20
+	weaken = 15
+	stutter = 15
 	embed = 0
 
-/obj/item/projectile/bullet/a762
-	damage = 25
+/obj/item/projectile/bullet/a762 //Full-power rifle rounds
+	damage = 50
+	stun = 25
+	weaken = 15

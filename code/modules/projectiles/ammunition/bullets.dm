@@ -1,7 +1,7 @@
 /obj/item/ammo_casing/a357
 	desc = "A .357 bullet casing."
 	caliber = "357"
-	projectile_type = "/obj/item/projectile/bullet"
+	projectile_type = "/obj/item/projectile/bullet/midbullet2"
 
 /obj/item/ammo_casing/a50
 	desc = "A .50AE bullet casing."
@@ -29,19 +29,19 @@
 /obj/item/ammo_casing/c38
 	desc = "A .38 bullet casing."
 	caliber = "38"
-	projectile_type = "/obj/item/projectile/bullet/weakbullet"
+	projectile_type = "/obj/item/projectile/bullet/midbullet"
 
 
 /obj/item/ammo_casing/c9mm
 	desc = "A 9mm bullet casing."
 	caliber = "9mm"
-	projectile_type = "/obj/item/projectile/bullet/midbullet2"
+	projectile_type = "/obj/item/projectile/bullet/midbullet"
 
 
 /obj/item/ammo_casing/c45
 	desc = "A .45 bullet casing."
 	caliber = ".45"
-	projectile_type = "/obj/item/projectile/bullet/midbullet"
+	projectile_type = "/obj/item/projectile/bullet/midbullet2"
 
 /obj/item/ammo_casing/c45r
 	desc = "A .45 rubber bullet casing."
@@ -51,7 +51,7 @@
 /obj/item/ammo_casing/a12mm
 	desc = "A 12mm bullet casing."
 	caliber = "12mm"
-	projectile_type = "/obj/item/projectile/bullet/midbullet2"
+	projectile_type = "/obj/item/projectile/bullet"
 
 
 /obj/item/ammo_casing/shotgun
