@@ -20,7 +20,7 @@ obj/machinery/atmospherics/binary/volume_pump
 	desc = "A volumetric pump"
 
 	var/on = 0
-	var/transfer_rate = 200
+	var/transfer_rate = 250
 
 	var/frequency = 0
 	var/id = null
@@ -56,7 +56,7 @@ obj/machinery/atmospherics/binary/volume_pump
 		var/input_starting_pressure = air1.return_pressure()
 		var/output_starting_pressure = air2.return_pressure()
 
-		if((input_starting_pressure < 0.01) || (output_starting_pressure > 9000))
+		if((input_starting_pressure < 0.01) || (output_starting_pressure > 10000))
 			return 1
 
 		var/transfer_ratio = max(1, transfer_rate/air1.volume)
@@ -158,8 +158,8 @@ obj/machinery/atmospherics/binary/volume_pump
 		if(href_list["power"])
 			on = !on
 		if(href_list["set_transfer_rate"])
-			var/new_transfer_rate = input(usr,"Enter new output volume (0-200l/s)","Flow control",src.transfer_rate) as num
-			src.transfer_rate = max(0, min(200, new_transfer_rate))
+			var/new_transfer_rate = input(usr,"Enter new output volume (0-250l/s)","Flow control",src.transfer_rate) as num
+			src.transfer_rate = max(0, min(250, new_transfer_rate))
 		usr.set_machine(src)
 		src.update_icon()
 		src.updateUsrDialog()
