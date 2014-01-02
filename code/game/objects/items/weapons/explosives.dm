@@ -32,7 +32,10 @@
 		user << "Bomb has been planted. Timer counting down from [timer]."
 		spawn(timer*10)
 			if(target)
-				explosion(location, -1, -1, 2, 3)
+				if (config.use_recursive_explosions)
+					explosion_rec(location, 1)
+				else
+					explosion(location, -1, -1, 2, 3)
 				if (istype(target, /turf/simulated/wall)) target:dismantle_wall(1)
 				else target.ex_act(1)
 				if (isobj(target))
