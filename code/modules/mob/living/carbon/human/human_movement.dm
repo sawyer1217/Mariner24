@@ -1,7 +1,6 @@
 /mob/living/carbon/human/movement_delay()
 	var/tally = 0
-	var/mob/living/carbon/human/MD
-	var/race = MD.species.name
+	var/race = species.name
 
 	if (istype(loc, /turf/space)) return -1 // It's hard to be slowed down in space by... anything
 
