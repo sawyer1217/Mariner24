@@ -58,8 +58,14 @@
 				H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/survival(H.back), slot_in_backpack)
 				H.equip_to_slot_or_del(new /obj/item/weapon/storage/box/handcuffs(H.back), slot_in_backpack)
 		H.equip_to_slot_or_del(new /obj/item/device/pda/heads/hos(H), slot_belt)
-
-		return 1
+		var/obj/item/weapon/implant/loyalty/L = new/obj/item/weapon/implant/loyalty(H)
+		L.imp_in = H
+		L.implanted = 1
+		H << "As the Head of Security, you are the proud owner of a Loyalty implant. Read more about them <a href=http://http://baystation12.net/wiki/index.php?title=Security_Items#Loyalty_Implant>here</a>"
+		var/datum/organ/external/affected = H.organs_by_name["head"]
+		affected.implants += L
+		L.part = affected
+ 		return 1
 
 
 
